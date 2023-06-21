@@ -11,9 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        requestDataFromAPI()
     }
-
-
+    
+    func requestDataFromAPI() {
+        AppServices.shared.apiProvider.request(.logout) { result in
+            //Code
+        }
+    }
 }
 
